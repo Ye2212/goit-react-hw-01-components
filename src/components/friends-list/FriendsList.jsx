@@ -1,10 +1,9 @@
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 
 
-export default function FriendsList ({ title, friends }) {
+export default function FriendsList ({friends}) {
     return (
-    <section >
-{title && <h2>{title}</h2>}
+
 <ul> 
     {
         friends.map(({ id, isOnline, name, avatar }) => {
@@ -18,17 +17,14 @@ return (
 )})
 }
 </ul>
-    </section> 
     );
 }
 
-
 FriendsList.proptype = {
-    title: propTypes.string,
-    friends: propTypes.shape({
-        id: propTypes.string.isRequired,
-        isOnline: propTypes.string,
-        name: propTypes.string,
-        avatar: propTypes.string
+    friends: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        isOnline: PropTypes.string,
+        name: PropTypes.string,
+        avatar: PropTypes.string
     }).isRequired,
 }

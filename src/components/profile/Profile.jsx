@@ -9,7 +9,7 @@ export default function Profile ({
     tag,
     location,
     avatar = profileDefaultImg,
-    stats
+    stats,
 }) {
     return (
         <div>
@@ -17,6 +17,8 @@ export default function Profile ({
                 <img
                 src={avatar}
                 alt="User avatar"
+                width={150}
+                height={150}
                 />
                 <p>{userName}</p>
                 <p>{tag}</p>
