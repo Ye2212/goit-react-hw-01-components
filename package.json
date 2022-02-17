@@ -18,7 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint:js": "eslint src/**/*.{js,jsx}"
+    "lint:js": "eslint src/**/*.{js,jsx}",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -40,7 +41,12 @@
   },
   "description": "**Read in other languages: [Русский](README.md), [Polska](README.pl.md).**",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "prettier": "2.5.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ye2212/goit-react-hw-01-components.git"
@@ -49,5 +55,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Ye2212/goit-react-hw-01-components/issues"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }

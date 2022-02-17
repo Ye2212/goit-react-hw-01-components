@@ -1,4 +1,4 @@
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 
 
 export default function Section ( {title, children} ) {
@@ -12,5 +12,6 @@ export default function Section ( {title, children} ) {
 }
 
 Section.prototype = {
-    title: propTypes.string,
+    title: PropTypes.string,
+    children: PropTypes.node,
 }

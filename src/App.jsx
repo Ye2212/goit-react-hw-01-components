@@ -30,6 +30,7 @@ export default function App(){
 
 <Section title={"Task-2 Statistics"}>
     <Statistics
+    title="Upload stats"
     stats = {stats} 
     />
 </Section>
