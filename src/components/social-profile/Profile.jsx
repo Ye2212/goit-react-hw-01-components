@@ -1,7 +1,10 @@
 import PropTypes from "prop-types";
 import profileDefaultImg from './profile-default-img.jpg';
 
-export default function Profile ( {
+
+//  const user = { userName = "User Name", tag, location, avatar = profileDefaultImg, stats : { followers, views, likes } };
+
+export default function Profile ({
     userName = "User Name",
     tag,
     location,
@@ -15,23 +18,23 @@ export default function Profile ( {
                 src={avatar}
                 alt="User avatar"
                 />
-                <p class="name">{userName}</p>
-                <p class="tag">{tag}</p>
-                <p class="location">{location}</p>
+                <p>{userName}</p>
+                <p>{tag}</p>
+                <p>{location}</p>
             </div>
                 
                 <ul>
                     <li>
-                    <span class="label">Followers: </span>
-                    <span class="quantity">{stats.followers}</span>
+                    <span>Followers: </span>
+                    <span>{stats.followers}</span>
                     </li>
                     <li>
-                    <span class="label">Views: </span>
-                    <span class="quantity">{stats.views}</span>
+                    <span>Views: </span>
+                    <span>{stats.views}</span>
                     </li>
                     <li>
-                    <span class="label">Likes: </span>
-                    <span class="quantity">{stats.likes}</span>
+                    <span>Likes: </span>
+                    <span>{stats.likes}</span>
                     </li>
                 </ul>
         </div>  
