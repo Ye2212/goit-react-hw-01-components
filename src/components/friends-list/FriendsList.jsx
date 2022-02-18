@@ -9,11 +9,12 @@ export default function FriendsList ({friends}) {
     {
         friends.map(({ id, isOnline, name, avatar }) => {
 return (
-    <li className="friends-list__item"
-    key={id}>
-        <span className="status">{isOnline}</span>
-        <img className="avatar" src={avatar} alt="User avatar" width="48" />
-        <p className="name">{name}</p>
+    <li className = "friends-list__item" key={id}>
+        <span
+        className = {isOnline? "online": "offline"}  >
+        </span>
+        <img className="friends-list__avatar" src={avatar} alt="User avatar" width="48" />
+        <p className="friends-list__name">{name}</p>
     </li>
 )})
 }
