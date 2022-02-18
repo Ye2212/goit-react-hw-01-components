@@ -17,6 +17,7 @@ import transactions from './data/transactions.json';
 export default function App(){
   return (
     <div>
+        <h2>React-Homework-01-Components</h2>
 
 <Section title={"Task-1 Social Network Profile"}>
     <Profile

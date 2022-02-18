@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import './Statistics.css';
 import getRandomHexColor from "js/getRandomHexColor";
 
 export default function Statistics ( {title, stats} ) {
@@ -9,13 +10,13 @@ export default function Statistics ( {title, stats} ) {
           <ul className="stat-list">
             {stats.map(({id, label,percentage}) => {
               return (
-              <li
+              <li className="stat-list__item"
               key={id}
               style = {{ backgroundColor: getRandomHexColor() }}
               >
           
-                <span>{label}</span>
-                <span>{percentage}%</span>
+                <span className="label">{label}</span>
+                <span className="percentage">{percentage}%</span>
               </li>
             );
             })}
