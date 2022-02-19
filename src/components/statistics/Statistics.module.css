@@ -5,14 +5,14 @@
   text-align: center;
   margin-bottom: 20px;
 }
-.stat-list {
+.list {
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
   /* border: 1px solid black; */
 }
-.stat-list__item {
+.item {
   display: flex;
   flex-direction: column;
   padding: 20px;

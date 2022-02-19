@@ -57,7 +57,7 @@
   width: 100%;
 }
 
-.stats__item {
+.statsItem {
   display: flex;
   flex-direction: column;
   flex-basis: calc(100% / 3);

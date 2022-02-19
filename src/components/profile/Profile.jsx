@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import './Profile.css';
+import s from './Profile.module.css';
 import profileDefaultImg from './profile-default-img.jpg';
 
 
@@ -13,32 +13,32 @@ export default function Profile ({
     stats,
 }) {
     return (
-        <div className="profile">
-            <div className="description">
+        <div className={s.profile}>
+            <div className={s.description}>
                 <img
-                className="avatar"
+                className={s.avatar}
                 src={avatar}
                 alt="User avatar"
                 width={150}
                 height={150}
                 />
-                <p className="name">{username}</p>
-                <p className="tag">@{tag}</p>
-                <p className="location">{location}</p>
+                <p className={s.name}>{username}</p>
+                <p className={s.tag}>@{tag}</p>
+                <p className={s.location}>{location}</p>
             </div>
                 
-                <ul className="stats">
-                    <li className="stats__item">
-                    <span className="label">Followers: </span> 
-                    <span className="quantiti">{stats.followers}</span>
+                <ul className={s.stats}>
+                    <li className={s.statsItem}>
+                    <span className={s.label}>Followers: </span> 
+                    <span className={s.quantiti}>{stats.followers}</span>
                     </li>
-                    <li className="stats__item">
-                    <span className="label">Views: </span>
-                    <span className="quantiti">{stats.views}</span>
+                    <li className={s.statsItem}>
+                    <span className={s.label}>Views: </span>
+                    <span className={s.quantiti}>{stats.views}</span>
                     </li>
-                    <li className="stats__item">
-                    <span className="label">Likes: </span>
-                    <span className="quantiti">{stats.likes}</span>
+                    <li className={s.statsItem}>
+                    <span className={s.label}>Likes: </span>
+                    <span className={s.quantiti}>{stats.likes}</span>
                     </li>
                 </ul>
         </div>  
