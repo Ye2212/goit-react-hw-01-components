@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
 import s from '../FriendsList.module.css';
 
-export default function FriendsListItem( {isOnline, avatar, name} ) {
+export default function FriendsListItem( {isOnline, avatar, name, id} ) {
     return (
-        <li className = {s.item}>
+        <li className = {s.item}
+        key={id}>
         <span
         className={s.status}
         // className = {isOnline? "online": "offline"} 
@@ -17,6 +18,7 @@ export default function FriendsListItem( {isOnline, avatar, name} ) {
 }
 
 FriendsListItem.prototype = {
+    id: PropTypes.string.isRequired,
     isOnline: PropTypes.bool.isRequired,
     name: PropTypes.string.isRequired,
     avatar: PropTypes.string.isRequired,
