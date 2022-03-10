@@ -1,35 +1,23 @@
 import PropTypes from "prop-types";
+import FriendsListItem from "./FriendsListItem/FriendsListItem";
 import s from './FriendsList.module.css';
-
 
 export default function FriendsList ({friends}) {
     return (
 
 <ul className={s.list}> 
     {
-        friends.map(({ id, isOnline, name, avatar }) => {
-return (
-    <li className = {s.item} key={id}>
-        <span
-        className={s.status}
-        // className = {isOnline? "online": "offline"} 
-        style={{ backgroundColor: isOnline ? 'green' : 'red' }}
-        >
-        </span>
-        <img className={s.avatar} src={avatar} alt="User avatar" width="48" />
-        <p className={s.name}>{name}</p>
-    </li>
-)})
-}
+        friends.map(({ id, isOnline, name, avatar }) => (
+            <FriendsListItem
+            key={id}
+            isOnline={isOnline}
+            avatar={avatar}
+            name={name} />
+        ))}
 </ul>
     );
 }
 
 FriendsList.proptype = {
-    friends: PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        isOnline: PropTypes.bool,
-        name: PropTypes.string,
-        avatar: PropTypes.string
-    }).isRequired,
+    friends: PropTypes.arrayOf(PropTypes.object).isRequired,
 }

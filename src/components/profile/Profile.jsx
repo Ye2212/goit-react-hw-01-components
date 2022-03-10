@@ -10,7 +10,7 @@ export default function Profile ({
     tag,
     location,
     avatar = profileDefaultImg,
-    stats,
+    stats: { followers, views, likes  },
 }) {
     return (
         <div className={s.profile}>
@@ -30,15 +30,15 @@ export default function Profile ({
                 <ul className={s.stats}>
                     <li className={s.statsItem}>
                     <span className={s.label}>Followers: </span> 
-                    <span className={s.quantiti}>{stats.followers}</span>
+                    <span className={s.quantiti}>{followers}</span>
                     </li>
                     <li className={s.statsItem}>
                     <span className={s.label}>Views: </span>
-                    <span className={s.quantiti}>{stats.views}</span>
+                    <span className={s.quantiti}>{views}</span>
                     </li>
                     <li className={s.statsItem}>
                     <span className={s.label}>Likes: </span>
-                    <span className={s.quantiti}>{stats.likes}</span>
+                    <span className={s.quantiti}>{likes}</span>
                     </li>
                 </ul>
         </div>  
